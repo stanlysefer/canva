@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <title>Canvas básico</title>
+    <title>Canvas básico - Rectángulos</title>
 </head>
 <body>
-    <h1>Canvas básico</h1>
-    <canvas id= "miCanvas" width="500" height="300">
+    <h1>Canvas básico - Rectángulos</h1>
+    <canvas id="miCanvas" width="500" height="300">
         Tu navegador no soporta canvas
     </canvas>
     <script>
@@ -21,7 +21,14 @@
                 var ctx = canvas.getContext("2d");
                 if(ctx)
                 {
-                    alert("Bienvenidos al canvas de html");
+                    // Definición de colores
+                    ctx.fillStyle = "yellow"; // Color de relleno
+                    ctx.strokeStyle = "#ff0000"; // Color del borde
+                    ctx.lineWidth = 5; // Grosor de línea
+
+                    // Dibujamos rectángulos
+                    ctx.fillRect(50, 50, 100, 100); // Parámetros: (x, y, width, height)
+                    ctx.strokeRect(50, 50, 100, 100);
                 }
                 else
                 {
