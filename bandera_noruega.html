@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <title>Canvas básico - Bandera de noruega </title>
+</head>
+<body>
+    <h1>Canvas básico - Bandera de Noruega</h1>
+    <canvas id="banderaNoruega" width="500" height="300"></canvas>
+    <script>
+        const canvas = document.getElementById('banderaNoruega');
+        const ctx = canvas.getContext('2d');
+
+        // Dimensiones de la bandera
+        const width = canvas.width;
+        const height = canvas.height;
+
+        // Colores de la bandera
+        const rojo = '#BA0C2F';
+        const blanco = '#FFFFFF';
+        const azul = '#00205B';
+
+        // Dimensiones de las cruces
+        const cruzAnchoBlanco = width * 6 / 50;
+        const cruzAnchoAzul = cruzAnchoBlanco * 2 / 3;
+        const cruzHorizontalPos = height / 2 - cruzAnchoBlanco / 2;
+        const cruzVerticalPos = width * 6 / 22;
+
+        // Fondo rojo
+        ctx.fillStyle = rojo;
+        ctx.fillRect(0, 0, width, height);
+
+        // Cruz blanca horizontal
+        ctx.fillStyle = blanco;
+        ctx.fillRect(0, cruzHorizontalPos, width, cruzAnchoBlanco);
+
+        // Cruz blanca vertical
+        ctx.fillStyle = blanco;
+        ctx.fillRect(cruzVerticalPos - cruzAnchoBlanco / 2, 0, cruzAnchoBlanco, height);
+
+        // Cruz azul horizontal
+        ctx.fillStyle = azul;
+        ctx.fillRect(0, cruzHorizontalPos + cruzAnchoBlanco / 6, width, cruzAnchoAzul);
+
+        // Cruz azul vertical
+        ctx.fillStyle = azul;
+        ctx.fillRect(cruzVerticalPos - cruzAnchoAzul / 2, 0, cruzAnchoAzul, height);
+    </script>
+</body>
+</html>
