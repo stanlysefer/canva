@@ -1,7 +1,7 @@
 # Juegos con HTML5
 
 
-##Elemeno canvas 
+## Elemeno canvas 
 - el elemento canvas, junto a el lenguaje js nos permite crear alcaciones y juegos 2d en el navegador.
 - en el navegador el codigo se interpreta de manera secuencial.
 - para utilizar el codigo JS debemos esperar a que todos los elementos htmlhallan sido creados antes de ser utilizados.
